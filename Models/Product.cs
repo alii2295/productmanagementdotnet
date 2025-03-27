@@ -16,5 +16,7 @@ namespace gestionproduit.Models
         public int Stock { get; set; }
 
         public string? ImagePath { get; set; }
+        // ✅ Soft Delete flag
+        public bool IsActive { get; set; } = true;
     }
 }

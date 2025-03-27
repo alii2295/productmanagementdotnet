@@ -1,12 +1,4 @@
-﻿@model IEnumerable<gestionproduit.Models.Product>
-
-@{
-    ViewData["Title"] = "Product List";
-}
-
-<h2>Product List</h2>
-
-<form method="get">
+﻿<form method="get">
     <div class="row">
         <div class="col-md-4">
             <input type="text" name="searchTerm" class="form-control" placeholder="Search by name" />
@@ -16,6 +8,10 @@
         </div>
         <div class="col-md-2">
             <input type="number" name="maxPrice" class="form-control" placeholder="Max Price" />
+        </div>
+        <div class="col-md-2">
+            <input type="checkbox" name="showInactive" value="true" @(ViewBag.ShowInactive ? "checked" : "") />
+            <label>Show Inactive</label>
         </div>
         <div class="col-md-2">
             <button type="submit" class="btn btn-primary">Filter</button>
@@ -51,8 +47,19 @@
                     }
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning btn-sm">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@product.Id" class="btn btn-danger btn-sm">Delete</a>
+                    @if (product.IsActive)
+                    {
+                        <a asp-action="Edit" asp-route-id="@product.Id" class="btn btn-warning btn-sm">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@product.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="Restore" asp-route-id="@product.Id" method="post" style="display:inline;">
+                            <button type="submit" class="btn btn-success btn-sm">Restore</button>
+                        </form>
+                    }
                 </td>
             </tr>
         }
@@ -60,32 +67,27 @@
 </table>
 
 <a asp-action="Create" class="btn btn-success mt-3">Add New Product</a>
-
 <!-- Toastify Notification Script -->
 <script>
-    $(document).ready(function() {  // This code will run once the document is ready
+    $(document).ready(function() {
     @if (TempData["ToastMessage"] != null)
     {
-        var message = TempData["ToastMessage"]?.ToString();
-        var type = TempData["ToastType"]?.ToString();
-
-        var backgroundColor = type == "success" ? "green" : "red";
-
-        // Ensure the Toastify script runs after the page is loaded
         <text>
-                        Toastify({
-                            text: "@Html.Raw(message)",
-                            duration: 3000,
-                            close: true,
-                            gravity: "top",
-                            position: "right",
-                            backgroundColor: "@Html.Raw(backgroundColor)",
-                            stopOnFocus: true
-                        }).showToast();
+                    var message = "@Html.Raw(TempData["ToastMessage"])";
+                    var type = "@Html.Raw(TempData["ToastType"])";
+                    var backgroundColor = type === "success" ? "green" : "red";
+
+                    Toastify({
+                        text: message,
+                        duration: 3000,
+                        close: true,
+                        gravity: "top",
+                        position: "right",
+                        backgroundColor: backgroundColor,
+                        stopOnFocus: true
+                    }).showToast();
         </text>
     }
     });
 </script>
-
-
 

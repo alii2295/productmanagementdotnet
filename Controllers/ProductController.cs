@@ -18,9 +18,11 @@ namespace gestionproduit.Controllers
         }
 
         // ✅ READ - Display list of products with sorting, filtering
-        public async Task<IActionResult> Index(string searchTerm, decimal? minPrice, decimal? maxPrice, string sortOrder)
+        public async Task<IActionResult> Index(string searchTerm, decimal? minPrice, decimal? maxPrice, string sortOrder, bool showInactive = false)
         {
-            var products = _context.Products.AsQueryable();
+            var products = _context.Products
+                                   .Where(p => showInactive || p.IsActive) // ✅ Show active products by default
+                                   .AsQueryable();
 
             if (!string.IsNullOrEmpty(searchTerm))
             {
@@ -56,8 +58,11 @@ namespace gestionproduit.Controllers
                     break;
             }
 
+            ViewBag.ShowInactive = showInactive;
+
             return View(await products.ToListAsync());
         }
+
 
         // ✅ CREATE - GET
         public IActionResult Create()
@@ -88,15 +93,11 @@ namespace gestionproduit.Controllers
 
                 _context.Add(product);
                 await _context.SaveChangesAsync();
-
-                // ✅ Set TempData for success message after product creation
                 // Set TempData message for success
-                TempData["ToastMessage"] = "Product added successfully!";
-                TempData["ToastType"] = "success"; // Or "error" based on success or failure
-
-                return RedirectToAction(nameof(Index)); // Redirect to the Index page after adding the product
+                TempData["SuccessMessage"] = "Product added successfully!";
+                return RedirectToAction(nameof(Index));
+                TempData["SuccessMessage"] = "Product added successfully!";
             }
-
             return View(product);
         }
 
@@ -134,12 +135,10 @@ namespace gestionproduit.Controllers
                 _context.Update(product);
                 await _context.SaveChangesAsync();
 
-                // ✅ Set TempData for success message after product update
-                TempData["SuccessMessage"] = $"Product '{product.Name}' updated successfully!"; // Success message
+                Console.WriteLine($"✅ Product '{product.Name}' updated successfully!");
 
-                return RedirectToAction(nameof(Index)); // Redirect to the Index page after updating the product
+                return RedirectToAction(nameof(Index));
             }
-
             return View(product);
         }
 
@@ -153,21 +152,39 @@ namespace gestionproduit.Controllers
         }
 
         // ✅ DELETE - POST
-        [HttpPost, ActionName("Delete")]
+        [HttpPost,ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var product = await _context.Products.FindAsync(id);
             if (product != null)
             {
-                _context.Products.Remove(product);
+                product.IsActive = false; // ✅ Soft delete by marking inactive
+                _context.Update(product);
                 await _context.SaveChangesAsync();
 
-                // ✅ Set TempData for success message after product deletion
-                TempData["SuccessMessage"] = $"Product '{product.Name}' deleted successfully!"; // Success message
+                TempData["ToastMessage"] = $"Product '{product.Name}' was deleted.";
+                TempData["ToastType"] = "error";
             }
-
-            return RedirectToAction(nameof(Index)); // Redirect to the Index page after deletion
+            return RedirectToAction(nameof(Index));
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Restore(int id)
+        {
+            var product = await _context.Products.FindAsync(id);
+            if (product != null)
+            {
+                product.IsActive = true;
+                _context.Update(product);
+                await _context.SaveChangesAsync();
+
+                TempData["ToastMessage"] = $"Product '{product.Name}' was restored.";
+                TempData["ToastType"] = "success";
+            }
+            return RedirectToAction(nameof(Index));
+        }
+
     }
 }
