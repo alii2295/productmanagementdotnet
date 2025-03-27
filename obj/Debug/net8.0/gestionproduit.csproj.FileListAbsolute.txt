@@ -170,3 +170,15 @@ C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0\gestionproduit.genruntimeconfig.cache
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0\ref\gestionproduit.dll
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0\gestionproduit.sourcelink.json
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\MailKit.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\MimeKit.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\runtimes\win\lib\net8.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\Google.Apis.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\Google.Apis.Auth.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\Google.Apis.Core.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\Newtonsoft.Json.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\System.Management.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll

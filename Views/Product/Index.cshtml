@@ -60,3 +60,32 @@
 </table>
 
 <a asp-action="Create" class="btn btn-success mt-3">Add New Product</a>
+
+<!-- Toastify Notification Script -->
+<script>
+    $(document).ready(function() {  // This code will run once the document is ready
+    @if (TempData["ToastMessage"] != null)
+    {
+        var message = TempData["ToastMessage"]?.ToString();
+        var type = TempData["ToastType"]?.ToString();
+
+        var backgroundColor = type == "success" ? "green" : "red";
+
+        // Ensure the Toastify script runs after the page is loaded
+        <text>
+                        Toastify({
+                            text: "@Html.Raw(message)",
+                            duration: 3000,
+                            close: true,
+                            gravity: "top",
+                            position: "right",
+                            backgroundColor: "@Html.Raw(backgroundColor)",
+                            stopOnFocus: true
+                        }).showToast();
+        </text>
+    }
+    });
+</script>
+
+
+

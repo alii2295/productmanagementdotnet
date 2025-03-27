@@ -2,6 +2,7 @@
 using gestionproduit.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using System.IO;
 
 namespace gestionproduit.Controllers
 {
@@ -36,7 +37,6 @@ namespace gestionproduit.Controllers
                 products = products.Where(p => p.Price <= maxPrice.Value);
             }
 
-            // Sorting
             ViewData["NameSortParam"] = string.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["PriceSortParam"] = sortOrder == "price_asc" ? "price_desc" : "price_asc";
 
@@ -72,6 +72,7 @@ namespace gestionproduit.Controllers
         {
             if (ModelState.IsValid)
             {
+                // Handle image upload
                 if (imageFile != null)
                 {
                     var fileName = Guid.NewGuid().ToString() + Path.GetExtension(imageFile.FileName);
@@ -87,8 +88,15 @@ namespace gestionproduit.Controllers
 
                 _context.Add(product);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                // ✅ Set TempData for success message after product creation
+                // Set TempData message for success
+                TempData["ToastMessage"] = "Product added successfully!";
+                TempData["ToastType"] = "success"; // Or "error" based on success or failure
+
+                return RedirectToAction(nameof(Index)); // Redirect to the Index page after adding the product
             }
+
             return View(product);
         }
 
@@ -125,8 +133,13 @@ namespace gestionproduit.Controllers
 
                 _context.Update(product);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+
+                // ✅ Set TempData for success message after product update
+                TempData["SuccessMessage"] = $"Product '{product.Name}' updated successfully!"; // Success message
+
+                return RedirectToAction(nameof(Index)); // Redirect to the Index page after updating the product
             }
+
             return View(product);
         }
 
@@ -149,8 +162,12 @@ namespace gestionproduit.Controllers
             {
                 _context.Products.Remove(product);
                 await _context.SaveChangesAsync();
+
+                // ✅ Set TempData for success message after product deletion
+                TempData["SuccessMessage"] = $"Product '{product.Name}' deleted successfully!"; // Success message
             }
-            return RedirectToAction(nameof(Index));
+
+            return RedirectToAction(nameof(Index)); // Redirect to the Index page after deletion
         }
     }
 }
