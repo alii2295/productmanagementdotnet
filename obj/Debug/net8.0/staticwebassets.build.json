@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qb9hdQxEwH7q1+jPqRXINrpZHzmbdsBefUTR87vbz/k=",
+  "Hash": "9UMF5NF1EiAnC8M7YcyZGHsnO7o3HQPYSkzjpdbODT4=",
   "Source": "gestionproduit",
   "BasePath": "_content/gestionproduit",
   "Mode": "Default",
@@ -414,6 +414,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\41315be5-2dba-472d-920c-97936d15e70d.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg",
+      "SourceId": "gestionproduit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\",
+      "BasePath": "_content/gestionproduit",
+      "RelativePath": "images/42f30421-1f53-4a56-b49c-f9f88abe32ff#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "0wpbb22f43",
+      "Integrity": "0GpbPn+hpDhUpjKyCVzETyowKRjPeeSaomZ1Sr7XQLs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg"
     },
     {
       "Identity": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\4a0d2024-c21e-469e-b741-fb267bd48f32.jpg",
@@ -939,6 +960,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\d154c45d-93ed-456e-860e-dffac9aa5096.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg",
+      "SourceId": "gestionproduit",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\",
+      "BasePath": "_content/gestionproduit",
+      "RelativePath": "images/dd54dd30-8b8e-45fc-91c6-344b34e49e46#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "hea3nuycnd",
+      "Integrity": "l9ma3GN8EmKj8iiYe0aBqP8PrS0G5n6txxPcJ12Jpe0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg"
     },
     {
       "Identity": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\dd7dfc11-810f-40b9-8cdb-f54de66bce04.jpg",
@@ -3845,6 +3887,88 @@
       ]
     },
     {
+      "Route": "images/42f30421-1f53-4a56-b49c-f9f88abe32ff.0wpbb22f43.jpg",
+      "AssetFile": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0GpbPn+hpDhUpjKyCVzETyowKRjPeeSaomZ1Sr7XQLs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 22:41:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "0wpbb22f43"
+        },
+        {
+          "Name": "label",
+          "Value": "images/42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-0GpbPn+hpDhUpjKyCVzETyowKRjPeeSaomZ1Sr7XQLs="
+        }
+      ]
+    },
+    {
+      "Route": "images/42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg",
+      "AssetFile": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\42f30421-1f53-4a56-b49c-f9f88abe32ff.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "217451"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"0GpbPn+hpDhUpjKyCVzETyowKRjPeeSaomZ1Sr7XQLs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 22:41:03 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-0GpbPn+hpDhUpjKyCVzETyowKRjPeeSaomZ1Sr7XQLs="
+        }
+      ]
+    },
+    {
       "Route": "images/4a0d2024-c21e-469e-b741-fb267bd48f32.jpg",
       "AssetFile": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\4a0d2024-c21e-469e-b741-fb267bd48f32.jpg",
       "Selectors": [],
@@ -5891,6 +6015,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-wgLjYUruX/m6L1mFeQOTQJRMDuLCpZvKcNRpYxKD7yY="
+        }
+      ]
+    },
+    {
+      "Route": "images/dd54dd30-8b8e-45fc-91c6-344b34e49e46.hea3nuycnd.jpg",
+      "AssetFile": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70807"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l9ma3GN8EmKj8iiYe0aBqP8PrS0G5n6txxPcJ12Jpe0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 22:20:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "hea3nuycnd"
+        },
+        {
+          "Name": "label",
+          "Value": "images/dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-l9ma3GN8EmKj8iiYe0aBqP8PrS0G5n6txxPcJ12Jpe0="
+        }
+      ]
+    },
+    {
+      "Route": "images/dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg",
+      "AssetFile": "C:\\Users\\GAMER\\Desktop\\projet.net\\gestionproduit\\gestionproduit\\wwwroot\\images\\dd54dd30-8b8e-45fc-91c6-344b34e49e46.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "70807"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"l9ma3GN8EmKj8iiYe0aBqP8PrS0G5n6txxPcJ12Jpe0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 27 Mar 2025 22:20:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-l9ma3GN8EmKj8iiYe0aBqP8PrS0G5n6txxPcJ12Jpe0="
         }
       ]
     },

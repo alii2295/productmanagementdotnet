@@ -182,3 +182,5 @@ C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\System.Management.dll
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Management.dll
 C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\System.Net.Http.Formatting.dll
+C:\Users\GAMER\Desktop\projet.net\gestionproduit\gestionproduit\bin\Debug\net8.0\Newtonsoft.Json.Bson.dll

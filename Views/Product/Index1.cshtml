@@ -1,0 +1,32 @@
+﻿@model IEnumerable<gestionproduit.Models.Productt>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th> <!-- ✅ Image Column -->
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Title</td> <!-- ✅ Use Title instead of Name -->
+                <td>@product.Price</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(product.Image))
+                    {
+                        <img src="@product.Image" alt="Product Image" style="width: 100px; height: auto;" />
+                    }
+                </td>
+                <td>
+                    <a href="@Url.Action("Details", "Product", new { id = product.Id })" class="btn btn-info">Details</a>
+                    <a href="@Url.Action("Edit", "Product", new { id = product.Id })" class="btn btn-warning">Edit</a>
+                    <a href="@Url.Action("Delete", "Product", new { id = product.Id })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -10,12 +10,31 @@ namespace gestionproduit.Controllers
     {
         private readonly AppDbContext _context;
         private readonly IWebHostEnvironment _environment;
+        private readonly ProductApiService _apiService;
 
-        public ProductController(AppDbContext context, IWebHostEnvironment environment)
+        public ProductController(AppDbContext context, IWebHostEnvironment environment, ProductApiService apiService)
         {
             _context = context;
             _environment = environment;
+            _apiService = apiService;
         }
+
+        // ✅ Display all products
+        public async Task<IActionResult> Index1()
+        {
+            var products = await _apiService.GetProductsAsync();
+            return View("Index1",products);
+        }
+
+        // ✅ View details
+        public async Task<IActionResult> Details(int id)
+        {
+            var product = await _apiService.GetProductByIdAsync(id);
+            if (product == null) return NotFound();
+            return View(product);
+        }
+
+       
 
         // ✅ READ - Display list of products with sorting, filtering
         public async Task<IActionResult> Index(string searchTerm, decimal? minPrice, decimal? maxPrice, string sortOrder, bool showInactive = false)
