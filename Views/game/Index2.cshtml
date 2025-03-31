@@ -1,0 +1,32 @@
+﻿@model IEnumerable<gestionproduit.Models.Game>
+
+<h2>🎮 Game List</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Released</th>
+            <th>Rating</th>
+            <th>Metacritic</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var game in Model)
+        {
+            <tr>
+                <td>
+                    @if (!string.IsNullOrEmpty(game.background_image))
+                    {
+                        <img src="@game.background_image" alt="@game.Name" style="width: 100px; height: auto;" />
+                    }
+                </td>
+
+                <td>@game.Name</td>
+                <td>@game.Released</td>
+                <td>@game.Rating ⭐</td>
+                <td>@game.Metacritic</td>
+            </tr>
+        }
+    </tbody>
+</table>

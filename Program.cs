@@ -1,4 +1,5 @@
 using gestionproduit.Data;
+using gestionproduit.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 
 builder.Services.AddHttpClient<ProductApiService>();
+builder.Services.AddHttpClient<GameApiService>();
 
 
 var app = builder.Build();
